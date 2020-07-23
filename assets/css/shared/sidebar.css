@@ -1,0 +1,37 @@
+#sidebar {
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.text-input {
+    padding: .7rem 1rem;
+    display: block;
+    border-radius: 5px;
+    outline: none;
+    color: #444;
+    line-height: 1.5rem;
+    font-size: 1.5em;
+    font-family: 'Lora', serif;
+    border: 1px solid lightgreen;
+}
+
+#sidebar .section.topics ul {
+    margin: 0x;
+    padding: 0px;
+    list-style: none;
+    border-top: 1px solid #e0e0e0;
+    color: red;
+}
+
+#sidebar .section.topics ul li a {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0px 15px;
+    transition: all 0.3s;
+}
+
+#sidebar .section.topics ul li a:hover {
+    padding-left: 20px;
+    transition: all 0.3s;
+
+}

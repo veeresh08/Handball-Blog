@@ -1,0 +1,83 @@
+@import "./shared/nav-bar.css";
+@import "./shared/cards.css";
+@import "./shared/footer.css";
+@import "./shared/sidebar.css";
+@import "./shared/content1.css";
+
+body {
+    background-color: rgb(71, 58, 58);
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr .2fr;
+    grid-template-areas: "header header header header""content1 content1 content1 sidebar""main main main sidebar""footer footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+header {
+
+    grid-area: header;
+}
+
+main {
+    background: #84ffff;
+    grid-area: main;
+
+}
+
+
+#sidebar {
+    background: rgb(253, 253, 253);
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+footer {
+    background: #303036;
+    grid-area: footer;
+}
+
+#content1 {
+    background: #b8b9b9;
+    grid-area: content1;
+}
+
+.btn {
+    padding: .5rem 1rem;
+    background: #006669;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: "header""content1""main""sidebar""content2""content3""footer";
+    }
+
+    main {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+
+        gap: 75px;
+
+        font-family: sans-serif;
+    }
+
+}
