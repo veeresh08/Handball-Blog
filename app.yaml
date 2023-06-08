@@ -1,6 +1,7 @@
 runtime: custom
 env: flex
-service: my-responsive-website
-automatic_scaling:
-  min_num_instances: 1
-  max_num_instances: 10
+network:
+  name: default
+  subnetwork_name: default
+manual_scaling:
+  instances: 1
