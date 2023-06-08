@@ -5,3 +5,5 @@ network:
   subnetwork_name: default
 manual_scaling:
   instances: 1
+skip_files:
+- cloudbuild.yaml
