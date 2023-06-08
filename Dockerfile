@@ -12,6 +12,5 @@ COPY app.yaml /app.yaml
 
 # Start nginx when the container starts
 CMD ["nginx", "-g", "daemon off;"]
-=======
 COPY . /usr/share/nginx/html
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
