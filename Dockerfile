@@ -8,7 +8,7 @@ COPY . /usr/share/nginx/html/
 COPY app.yaml /app.yaml
 
 # Expose port 8080 to listen for incoming requests
-#EXPOSE 8080
+EXPOSE 8080
 
 # Start nginx when the container starts
 CMD ["nginx", "-g", "daemon off;"]
