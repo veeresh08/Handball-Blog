@@ -1,5 +1,6 @@
 runtime: custom
 env: flex
+service: this-is-last-try
 network:
   name: default
   subnetwork_name: default
@@ -7,3 +8,5 @@ manual_scaling:
   instances: 1
 skip_files:
 - cloudbuild.yaml
+- Dockerfile
+- README.md
