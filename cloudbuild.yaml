@@ -1,12 +1,1 @@
-steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/l1-scoping-test/handball_image:$SHORT_SHA', '.']
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/l1-scoping-test/handball_image:$SHORT_SHA']
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args:
-      - 'app'
-      - 'deploy'
-      - '--image-url=gcr.io/l1-scoping-test/handball_image:$SHORT_SHA'
-options:
-  logging: CLOUD_LOGGING_ONLY
+cloudbuild.yaml
