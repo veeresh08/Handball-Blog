@@ -1,3 +1,5 @@
 steps:
   - name: 'python:3.8-slim'
     args: ['python', 'main.py']
+options:
+  logging: 'NONE'
