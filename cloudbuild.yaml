@@ -4,11 +4,12 @@ steps:
     args:
     - '-c'
     - |
-      git config --global advice.detachedHead false
+      # Suppress git hint messages by setting default branch name globally
+      git config --global init.defaultBranch main
+      # Proceed with other git commands
       git clone https://github.com/veeresh08/Handball-Blog.git .
       git fetch origin master:refs/remotes/origin/master
       git checkout FETCH_HEAD
-      # Additional commands as necessary
   - name: 'python:3.8-slim'
     args: ['python', 'main.py']
 options:
