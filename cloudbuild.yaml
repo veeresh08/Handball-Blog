@@ -1,5 +1,13 @@
 steps:
+  # Step to fetch source using Git and trigger the hint message
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['clone', 'https://github.com/veeresh08/Handball-Blog.git', '.']
+    entrypoint: 'bash'
+    dir: '/workspace'
+
+  # Your existing step
   - name: 'python:3.8-slim'
     args: ['python', 'main.py']
+
 options:
   logging: 'NONE'
